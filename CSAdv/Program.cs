@@ -19,6 +19,24 @@ namespace CSAdv
     {
         public T Value1;
         public V Value2;
+        public Needed(T value1, V value2)
+        {
+            Value1 = value1;
+            Value2 = value2;
+        }
+    }
+
+    class SpecialNeeded<T, U>
+        where T: IComparable
+        where U: IComparable, IDisposable
+    {   
+        public T Value1;
+        public U Value2;
+        public SpecialNeeded(T value1, U value2)
+        {
+            Value1 = value1;
+            Value2 = value2;
+        }
     }
     internal class Program
     {
