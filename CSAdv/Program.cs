@@ -38,6 +38,14 @@ namespace CSAdv
             Value2 = value2;
         }
     }
+
+    class SquareCalculator
+    {
+        public int this[int i] // indexer
+        {
+            get { return i * i; }
+        }
+    }
     internal class Program
     {
         static void Main(string[] args)
@@ -49,6 +57,9 @@ namespace CSAdv
             Console.WriteLine(wantedInt.Value);
             Console.WriteLine(wantedString.Value);
             Console.WriteLine(wantedDouble.Value);
+            
+            SquareCalculator s = new SquareCalculator();
+            Console.WriteLine(s[255]);
         }
     }
 }
