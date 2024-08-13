@@ -15,6 +15,11 @@ namespace CSAdv
             Value = value;
         }
     }
+    class Needed<T, V>
+    {
+        public T Value1;
+        public V Value2;
+    }
     internal class Program
     {
         static void Main(string[] args)
