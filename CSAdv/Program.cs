@@ -57,9 +57,22 @@ namespace CSAdv
             Console.WriteLine(wantedInt.Value);
             Console.WriteLine(wantedString.Value);
             Console.WriteLine(wantedDouble.Value);
-            
+
             SquareCalculator s = new SquareCalculator();
             Console.WriteLine(s[255]);
+
+            Console.Write("숫자 입력: ");
+            int output;
+            bool result = int.TryParse(Console.ReadLine(), out output);
+            if (result)
+            {
+                Console.WriteLine("입력한 숫자: " + output);
+            }
+            else
+            {
+                Console.WriteLine("숫자를 입력해주세요." + output);
+            }
+
         }
     }
 }
