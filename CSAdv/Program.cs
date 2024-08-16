@@ -53,6 +53,26 @@ namespace CSAdv
         {
             public int x;
             public int y;
+            public string testA;
+            public string testB;
+            // public string testB = "init"; // 구조체 내 변수는 선언과 동시에 초기화 불가능
+
+            // public Point(){ } // 구조체: 기본생성자 정의 불가능
+            public Point(int x, int y) // 구조체 생성자: 모든 변수 초기화 해주어야 함
+            {
+                this.x = x;
+                this.y = y;
+                testA = "init";
+                testB = "init";
+            }
+            public Point(int x, int y, string s) // 생성자 오버로딩 가능
+            {
+                this.x = x;
+                this.y = y;
+                this.testA = s;
+                this.testB = s;
+            }
+
         }
 
         static void NextPos(int x, int y, int vx, int vy, out int rx, out int ry)
